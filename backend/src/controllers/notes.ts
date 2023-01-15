@@ -96,4 +96,4 @@ export const updateNote: RequestHandler<UpdateNoteParams, unknown, UpdateNoteBod
     } catch (error) {
         next(error);
     }
-}
+};
