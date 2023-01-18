@@ -8,7 +8,7 @@ import styleUtils from "../styles/utils.module.css";
 import AddEditNoteDialog from "./AddEditNoteDialog";
 import Note from "./Note";
 
-const NotesPagesLoggedInViews = () => {
+const NotesPagesLoggedInView = () => {
 
     const [notes, setNotes] = useState<NoteModel[]>([]);
     const [notesLoading, setNotesLoading] = useState(true);
@@ -45,7 +45,7 @@ const NotesPagesLoggedInViews = () => {
     }
 
     const notesGrid =
-        <Row xs={1} md={2} xl={3} xxl={4} className={`g-4 ${styles.notGrid}`}>
+        <Row xs={1} md={2} xl={3} xxl={4} className={`g-4 ${styles.notesGrid}`}>
             {notes.map(note => (
                 <Col key={note._id}>
                     <Note
@@ -103,4 +103,4 @@ const NotesPagesLoggedInViews = () => {
     );
 }
 
-export default NotesPagesLoggedInViews;
+export default NotesPagesLoggedInView;
